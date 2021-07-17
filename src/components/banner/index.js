@@ -16,24 +16,22 @@ import {
   Descricao,
 } from './styles';
 
+import { MaterialCommunityIcons } from '@expo/vector-icons'; 
 
 import pijama1 from '../../images/pijama1.png';
-import pijama2 from '../../images/pijama2.png';
-import pijama3 from '../../images/pijama3.png';
+
 
 
 
 
 export default function Banner(props) {
   
-  function Teste() {
-    alert("Pijama lindo flanelado")
-   }
+
 
   return (
         <Container>
 
-          <Card onPress={Teste}>
+          <Card>
           <CardHeader>
               <Avatar source={pijama1} />
             </CardHeader>  
@@ -43,7 +41,12 @@ export default function Banner(props) {
             <CardFooter>
               <Details>
                 <Value>R$ 239,90</Value>
-
+                <Divider />
+                
+                <Descricao>
+                <MaterialCommunityIcons name="square-edit-outline" size={24} color="#fff" />
+                </Descricao>
+               
               </Details>
 
             </CardFooter>

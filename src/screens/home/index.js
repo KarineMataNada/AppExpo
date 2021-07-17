@@ -3,6 +3,7 @@ import { TouchableOpacity } from 'react-native';
 import {  Wrapper, Container, Header, BalanceContainer, Balance, GridFlex } from './styles';
 import Banner from '../../components/banner/index';
 import Topo from '../../components/topo/index';
+import Button from '../../components/button/index'
 //import AsyncStorage from '@react-native-async-storage/async-storage';
 
 
@@ -17,10 +18,13 @@ export default function Home({navigation}) {
         //await AsyncStorage.multiRemove(["token","nome"])
         navigation.navigate('Login');        
     }
+    function handleAdicionar(){
+        navigation.navigate('Adicionar');        
+    }
 
     return (
         <Wrapper>           
-          <Container>
+          
                <Header>
                 <TouchableOpacity>
                     <Ionicons name="md-person-circle-sharp" size={30} color="#c3b087" />
@@ -36,6 +40,7 @@ export default function Home({navigation}) {
                     <MaterialIcons name="logout" size={30} color="#c3b087" />
                 </TouchableOpacity> 
                 </Header>
+                <Container>
                 <Topo />
                 <GridFlex>
                 <Banner />
@@ -44,6 +49,7 @@ export default function Home({navigation}) {
                 <Banner />
                 </GridFlex>
             </Container>
+            <Button navigation={navigation}/>
         </Wrapper>     
     )
 }

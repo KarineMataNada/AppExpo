@@ -2,7 +2,7 @@ import styled from 'styled-components/native';
 
 export const Container = styled.View`
   padding-right: 20px;
-  padding-left: 20px;
+  padding-left: 14px;
   width: 45%;
 `;
 
@@ -14,13 +14,15 @@ export const Title = styled.Text`
   font-weight: bold;
 `;
 
-export const Card = styled.TouchableOpacity`
+export const Card = styled.View`
   background: #c3b087;
   border-radius: 8px;
   margin-top: 10px;
-  padding: 7px;
-  width: 100%;
-  height: 260px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 2px;
+  width: 120%;
+  height: 250px;
 `;
 
 
@@ -29,16 +31,9 @@ export const CardHeader = styled.View`
   align-items: center;
 `;
 
-export const Rolar = styled.ScrollView.attrs(() => ({
-  horizontal: true,
-  showsHorizontalScrollIndicator: false,
-}))`
-`;
-
-
 export const Avatar = styled.Image`
-  width: 80px;
-  height: 150px;
+  width: 130px;
+  height: 173px;
   margin: 5px;
   margin-left: 10px;
   border-radius: 4px;
@@ -47,7 +42,7 @@ export const Avatar = styled.Image`
 export const Description = styled.Text`
   color: #fff;
   font-size: 16px;
-  margin-left: 15px;
+  margin-left: 1px;
 `;
 
 export const Bold = styled.Text`
@@ -79,7 +74,8 @@ export const Value = styled.Text`
   color: #000;
   font-size: 14px;
   font-weight: bold;
-  margin-left: 24px;
+  margin-left: 15px;
+  margin-top: 1px;
 
 `;
 
@@ -90,9 +86,6 @@ export const Divider = styled.View`
   margin: 0 10px;
 `;
 
-export const Descricao = styled.Text`
-  color: #fff;
-  margin-left: 2px;
-`;
+export const Descricao = styled.TouchableOpacity``;
 
 
