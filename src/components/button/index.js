@@ -4,13 +4,13 @@ import { FAB } from 'react-native-paper';
 
 
 
-const MyComponent = ({navigation}) => (
+const MyComponent = ({modalizeRef}) => (
   <FAB
     style={styles.fab}
     small
     icon="plus"
-    onPress={() => navigation.navigate('Adicionar')}
-  />
+    onPress={() =>   modalizeRef.current?.open() 
+     } />
 );
 
 const styles = StyleSheet.create({
